@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2000
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Probando breeze", "Probando breeze\Probando breeze.csproj", "{78944946-57CA-453E-867C-EB64A34F1215}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{78944946-57CA-453E-867C-EB64A34F1215}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78944946-57CA-453E-867C-EB64A34F1215}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78944946-57CA-453E-867C-EB64A34F1215}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78944946-57CA-453E-867C-EB64A34F1215}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EB8A3A2D-2C38-4F22-A75A-E18DCCC4B29F}
+	EndGlobalSection
+EndGlobal
