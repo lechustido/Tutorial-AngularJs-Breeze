@@ -275,7 +275,6 @@
       <DependentUpon>ModeloBBDD.edmx</DependentUpon>
       <LastGenOutput>ModeloBBDD.cs</LastGenOutput>
     </Content>
-    <Content Include="PaginaPrincipal.html" />
     <Content Include="PaginaPrincipalController.js" />
     <Content Include="PaginaPrincipalCss.css" />
     <Content Include="Scripts\angular-mocks.js" />

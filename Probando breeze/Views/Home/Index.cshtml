@@ -1,24 +1,69 @@
-﻿<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS, and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>ASP.NET Web API is a framework that makes it easy to build HTTP services that reach
-        a broad range of clients, including browsers and mobile devices. ASP.NET Web API
-        is an ideal platform for building RESTful applications on the .NET Framework.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301870">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301871">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301872">Learn more &raquo;</a></p>
-    </div>
-</div>
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<!--Angular y Jquery-->
+	<script src="Scripts/angular.js"></script>
+	<script src="Scripts/q.js"></script>
+	<script src="Scripts/jquery-3.3.1.js"></script>
+
+	<!--Breeze-->
+	<script src="Scripts/breeze.min.js"></script>
+	<script src="Scripts/breeze.directives.js"></script>
+	<script src="Scripts/breeze.bridge.angular.js"></script>
+
+	<!--Otros ficheros-->
+	<script src="PaginaPrincipalController.js"></script>
+	<title>Prácticas con Breeze</title>
+</head>
+<body>
+	<div ng-app="breezeApp">
+		<div ng-controller="breezeCtr">
+			<h1>Prácticas con Breeze.</h1>
+			<hr />
+			<table border="1">
+				<tr>
+					<th>Nombre</th>
+					<th>Apellidos</th>
+					<th>Edad</th>
+					<th>Dirección</th>
+					<th>Id matricula</th>
+					<th>Curso</th>
+					<th>Precio</th>
+					<th>Borrar</th>
+					<th>Guardar</th>
+				</tr>
+				<tr ng-repeat="alumno in respuesta">
+					<td><input type="text" ng-model="alumno.Nombre"></td>
+					<td>{{alumno.Apellido}}</td>
+					<td>{{alumno.Edad}}</td>
+					<td>{{alumno.Direccion}}</td>
+					<td>{{alumno.Matricula1.Id}}</td>
+					<td>{{alumno.Matricula1.Curso}}</td>
+					<td>{{alumno.Matricula1.Precio}}</td>
+					<td><button ng-click="borrarAlumnos(alumno)">Borrar</button></td>
+					<td><button ng-click="modificarAlumno(alumno)">Guardar</button></td>
+				</tr>
+			</table>
+			<br />
+			<button ng-click="consultarDatosAlumnos()"> Consultar los alumnos</button>
+			<hr />
+			<!--Datos del alumno-->
+			<label for="inputText">Nombre del alumno:</label>
+			<input type="text" placeholder="Nombre del alumno" ng-model="nombreAlumno">
+			<label for="inputText">Apellido del alumno:</label>
+			<input type="text" placeholder="Apellidos del alumno" ng-model="apellidoAlumno">
+			<label for="inputText">Edad del alumno:</label>
+			<input type="text" placeholder="Edad del alumno" ng-model="edadAlumno">
+			<label for="inputText">Dirección del alumno:</label>
+			<input type="text" placeholder="Dirección del alumno" ng-model="direccionAlumno">
+			<!--Datos del curso-->
+			<label for="inputText">Nombre del curso:</label>
+			<input type="text" placeholder="Nombre del curso" ng-model="nombreCurso">
+			<label for="inputText">Precio del curso:</label>
+			<input type="text" placeholder="Precio del curso" ng-model="precioCurso">
+			<button ng-click="anadirAlumnos()"> Alumno y matrícula</button>
+		</div>
+	</div>
+</body>
+</html>
